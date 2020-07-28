@@ -54,7 +54,7 @@ ROOT_URLCONF = 'djangonautic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['djangonautic/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
