@@ -12,3 +12,9 @@ class Article (models.Model):
 
     def __str__(self):
         return self.title
+
+    # this method ensures that only the 50 first characters
+    # of the article are shown on the index
+
+    def snippet(self):
+        return self.body[0:50] + '...'
