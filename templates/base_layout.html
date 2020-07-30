@@ -6,12 +6,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Articles</title>
+        <title>Djangonauts</title>
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
 
     <body>
         <h1><a href="{% url 'articles:list' %}"><img src="{% static 'logo.png' %}" alt=""></a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <form action="{% url 'accounts:logout' %}" class="logout-link" method="POST">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
         <div class="wrapper">
             {% block content %}
 
